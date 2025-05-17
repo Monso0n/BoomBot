@@ -350,7 +350,6 @@ function draw() {
     noLoop();
     return;
   }
-
   
   // Health bar display
   fill(0);
@@ -413,9 +412,6 @@ function draw() {
     }
   }
 
-
-  // inside your draw() function, after health bar and explosions:
-
   // Check collision with spikes
   for (let i = spikes.length - 1; i >= 0; i--) {
     if (boombot.overlap(spikes[i])) {
@@ -438,6 +434,7 @@ function draw() {
     }
   }
 
+  drawSprites();
 }
 
 function mousePressed() {
